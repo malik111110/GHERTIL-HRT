@@ -17,5 +17,5 @@ class GraphGenerator:
             for neighbor in neighbors:
                 cost = random.randint(1, 10)
                 graph[node][neighbor] = cost
-                graph[neighbor][node] = cost  # Graphe non orienté
+                graph[neighbor][node] = cost
         return graph

@@ -37,6 +37,6 @@ class GhertilHRT:
             path.append(current_node)
             current_node = predecessors.get(current_node)
             if current_node is None:
-                return None  # Aucun chemin trouvé
+                return None
         path.append(start_node)
         return path[::-1]

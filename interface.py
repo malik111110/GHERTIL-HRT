@@ -9,13 +9,13 @@ class Application(Tk):
         self.title("Graphe et Algorithme Ghertil")
         self.geometry("1000x700")
 
-        # Initialisation des composants
+
         self.graph = GraphGenerator(num_nodes=10, min_edges=2, max_edges=4).generate()
         self.ghertil = GhertilHRT(self.graph)  # Passer le graphe généré
         self.init_ui()
 
     def init_ui(self):
-        # Cadre gauche pour les contrôles utilisateur
+
         control_frame = Frame(self, width=200, bg="lightgrey", relief="ridge", borderwidth=2)
         control_frame.pack(side="left", fill="y")
 
@@ -42,11 +42,13 @@ class Application(Tk):
         self.draw_graph()
 
     def generate_graph(self):
+
         self.graph = GraphGenerator(num_nodes=10, min_edges=2, max_edges=4).generate()
         self.ghertil = GhertilHRT(self.graph)  # Mettre à jour Ghertil avec le nouveau graphe
         self.draw_graph()
 
     def find_path(self):
+
         start_node = self.start_node_entry.get()
         target_node = self.target_node_entry.get()
 
@@ -61,9 +63,8 @@ class Application(Tk):
             print("Veuillez entrer des nombres valides.")
 
     def draw_graph(self):
-        self.canvas.delete("all")
 
-        # Forcer le rendu pour obtenir les dimensions correctes
+        self.canvas.delete("all")
         self.update_idletasks()
         width = self.canvas.winfo_width()
         height = self.canvas.winfo_height()
