@@ -7,7 +7,7 @@ class GhertilHRT:
 
     def find_path(self, start_node, target_node):
         if start_node not in self.graph or target_node not in self.graph:
-            return None, float("pas de solution un des noeuds n'est pas connecte au notre graphe")
+            return None, "Pas de solution, un des noeuds n'est pas connecté à notre graphe."
 
         distances = {node: float("inf") for node in self.graph}
         distances[start_node] = 0
